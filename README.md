@@ -35,10 +35,10 @@
 Данный проект использует:
 * Django 2
 
-Установите их
+Установите:
 
 ```python
-pip3 install django==2.0
+pip3 install 'django>=2.0'
 ```
 
 или
