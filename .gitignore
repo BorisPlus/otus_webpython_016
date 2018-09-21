@@ -1,0 +1,5 @@
+# My gitignore
+gitignore/**
+
+# PyCharm
+.idea/**
