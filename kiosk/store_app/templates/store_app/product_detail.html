@@ -1,0 +1,33 @@
+{% extends 'store_app/base.html' %}
+
+{% block html_head_title %}
+Product №{{ object.pk }} info
+{% endblock %}
+
+{% block html_body %}
+<center>
+    <table width="800">
+        <tr>
+            <th>Изображение</th>
+            <th>Подробное описание товара</th>
+        </tr>
+        <tr>
+            <td><img width="300" src="{{ object.main_image_path }}"></td>
+            <td>
+                <b>Товар:</b><br>
+                {{ object.name }}<br>
+                <b>Описание:</b><br>
+                {{ object.description }} <br>
+                <b>Характеристики товара:</b><br>
+                <ul>
+                    {% for product_attribute in object.productattributes_set.all %}
+                    <li><b>{{ product_attribute.attribute.name }}:</b> {{ product_attribute.value }}</li>
+                    {% endfor %}
+                </ul>
+                <br>
+                <a href="{{ object.shop_url }}" target="_blank">Перейти на сайт магазина</a> <br>
+            </td>
+        </tr>
+    </table>
+</center>
+{% endblock %}
