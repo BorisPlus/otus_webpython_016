@@ -60,7 +60,7 @@ $ git clone git://github.com/BorisPlus/dummy_wsgi_framework.git
 ```bash
 python3 /<absolute_path>/kiosk/manage.py migrate
 python3 /<absolute_path>/kiosk/manage.py createsuperuser --username=admin --email=admin@example.com
-python3 kiosk/manage.py runserver
+python3 /<absolute_path>/kiosk/manage.py runserver
 ```
 Перейдите по адресу http://127.0.0.1:8000
 
