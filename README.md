@@ -13,7 +13,6 @@
 ![KIOSK_ER_model](https://raw.githubusercontent.com/BorisPlus/otus_webpython_004/master/README.files/images/simple_ER_model.png "Title")
 [скачать проект схемы БД в формате DbWrench](https://raw.githubusercontent.com/BorisPlus/otus_webpython_004/master/README.files/docs/db_wrench_project.xml "Title")
 
-
 Если углубляться в реальные требования к подобному приложению, даже без реализации функционала осуществления заказов пользователем, то не хватает многого (в т.ч. по БД), например:
 * Отнесение товаров к категории
 * Иерархия категорий
@@ -29,7 +28,6 @@
 
 ... но это выходит, как я понял, за рамки данного домашнего задания.
 
-
 ### Требования
 
 Данный проект использует:
@@ -37,14 +35,21 @@
 
 Установите:
 
-```python
-pip3 install 'django>=2.0'
+```bash
+$ pip3 install 'django>=2.0'
 ```
 
 или
 
+```bash
+$ pip3 install -r requirements.txt
 ```
-pip3 install -r requirements.txt
+
+### Установка
+
+```bash
+$ cd <your_dir>
+$ git clone git://github.com/BorisPlus/dummy_wsgi_framework.git
 ```
 
 ### Использование
@@ -53,23 +58,30 @@ pip3 install -r requirements.txt
 
 Чтобы запустить проект выполните
 ```bash
-python3 /<absolute_path>/kiosk/app.py
+python3 /<absolute_path>/kiosk/manage.py migrate
+python3 /<absolute_path>/kiosk/manage.py createsuperuser --username=admin --email=admin@example.com
+python3 kiosk/manage.py runserver
 ```
-, чтобы очистить базу данных, можно просто удалить файл **_kiosk/db/kiosk.db_** и перезапустить приложение 
+Перейдите по адресу http://127.0.0.1:8000
 
-или же выполнить 
-
-```bash
-python3 /<absolute_path>/kiosk/__init__.py
-```
+административная панель  http://127.0.0.1:8000/admin
 
 ### Демонстрационный вариант базы данных
 
 С целью демонстрации функционирования Веб-приложения "КИОСК" были подготовленны сведения о товарах, атрибутах и их значениях с сайта Интернет-магазина "Мвидео" (не реклама)
 
-### Заполнение каталога товаров
+### Cкриншоты
 
 
+### Фичеризм реализации
+
+#### Мой подход к реализации маршрутов
+
+#### Мой подход к реализации представлений (Django Class Based Views)
+
+#### Мой подход к реализации расширенных представлений полей моделей
+
+#### Мой виджет в форме
 
 ## Авторы
 
