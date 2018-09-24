@@ -1,19 +1,13 @@
-from django.shortcuts import render
-from . import models
+from .models import Product
 from django.views.generic import (
     ListView,
-    DetailView
+    DetailView,
 )
 
 
-class ProductDetail(DetailView):
-    model = models.Product
-
-
 class ProductList(ListView):
-    model = models.Product
-    queryset = models.Product.objects.all()
+    model = Product
 
 
-def test(request):
-    return render(request, 'store_app/test.html')
+class ProductDetail(DetailView):
+    model = Product
