@@ -44,11 +44,11 @@
 
 #### Пример заранее подготовленных сведений (офлайн)
 
-[Пример](https://github.com/BorisPlus/otus_webpython_006/tree/master/additional_files_for_demonstration_of_app_working/import_data_to_kiosk_db_from_different_sources/data_fetchers/test_data.py) заранее подготовленных сведений о товарах, атрибутах и их значениях лежит в **_example_import_to_db_from_different_sources/data_fetchers/test_data.py_**. Это данные с "Яндекс.Маркет" (не реклама), внесенные вручную в указанную структуру специального вида для последующего их импорта.
+[Пример](https://github.com/BorisPlus/otus_webpython_006/tree/master/development_test_data/data_fetchers/test_data.py) заранее подготовленных сведений о товарах, атрибутах и их значениях лежит в **_example_import_to_db_from_different_sources/data_fetchers/test_data.py_**. Это данные с "Яндекс.Маркет" (не реклама), внесенные вручную в указанную структуру специального вида для последующего их импорта.
 
 #### Пример онлайн сбора сведений с сайта Интернет-магазина "Мвидео" (не реклама) 
 
-[Пример](https://github.com/BorisPlus/otus_webpython_006/tree/master/additional_files_for_demonstration_of_app_working/import_data_to_kiosk_db_from_different_sources/data_fetchers/mvideo_ru_data.py) 
+[Пример](https://github.com/BorisPlus/otus_webpython_006/tree/master/development_test_data/data_fetchers/mvideo_ru_data.py) 
 интерактивного сбора сведений о товарах, атрибутах и их значениях со страниц сайта Интернет-магазина "Мвидео" (не реклама) лежит в **_example_import_to_db_from_different_sources/data_fetchers/mvideo_ru_data.py_**.
 
 Данный пример осуществляет разбор html-структуры страниц сайта Интернет-магазина "Мвидео" и выбирает значения, соответствущие полям товаров и атрибутов, приводя собираемые даные к вышеописанному формату данных для импорта.
@@ -70,7 +70,7 @@ pip3 install -r additional/import_to_db_from/requirements.txt
 
 ### Запуск сбора и последующего импорта свведений
 
-[Демонстрационный пример](https://github.com/BorisPlus/otus_webpython_006/tree/master/additional_files_for_demonstration_of_app_working/import_data_to_kiosk_db_from_different_sources/example_import.py) сбора данных и их импорта в БД приведен в скрипте **_example_import_to_db_from_different_sources/example_import.py_**
+[Демонстрационный пример](https://github.com/BorisPlus/otus_webpython_006/tree/master/development_test_data/import_data_to_kiosk_db.py) сбора данных и их импорта в БД приведен в скрипте **_example_import_to_db_from_different_sources/example_import.py_**
 
 ```python
 from additional_files_for_demonstration_of_app_working.import_data_to_kiosk_db_from_different_sources.data_fetchers.mvideo_ru_data import get_products_info
@@ -94,4 +94,4 @@ if __name__ == '__main__':
 
 ## Дополнительные сведения
 
-Проект в рамках трехдневного домашнего задания курса "Web-разработчик на Python" на https://otus.ru/learning
+Проект в рамках домашнего задания курса "Web-разработчик на Python" на https://otus.ru/learning
