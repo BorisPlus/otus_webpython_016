@@ -10,12 +10,12 @@
         {% for product in object_list %}
         <tr>
             <td>
-                <a href="/product_detail/{{ product.id }}/">
+                <a href="{% url 'product_detail' product.id %}">
                     <img width="300" src="{{ product.main_image_path }}">
                 </a>
             </td>
             <td>
-                см. подробнее <a href="/product_detail/{{ product.id }}/">{{ product.name }}</a><br>
+                см. подробнее <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a><br>
                 <b>ОПИСАНИЕ:</b><br>
                 {{ product.description }} <br>
                 <a href="{{ product.shop_url }}" target="_blank">Перейти на сайт магазина</a> <br>
