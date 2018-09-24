@@ -49,7 +49,7 @@ $ pip3 install -r requirements.txt
 
 ```bash
 $ cd <your_dir>
-$ git clone git://github.com/BorisPlus/dummy_wsgi_framework.git
+$ git clone git://github.com/BorisPlus/otus_webpython_006.git
 ```
 
 ### Использование
