@@ -89,23 +89,37 @@ python3 /<absolute_path>/kiosk/manage.py runserver
 
 Открытая часть Веб-приложения:
 * Список товаров
+
 ![KIOSK_ER_model](https://raw.githubusercontent.com/BorisPlus/otus_webpython_006/master/README.files/images/screenshots/product_list.png "Title")
 
 * Описание товара
+
 ![KIOSK_ER_model](https://raw.githubusercontent.com/BorisPlus/otus_webpython_006/master/README.files/images/screenshots/product_detail.png "Title")
 
-Административная панель Веб-приложения:
-* Вход в административную панель Django
-![KIOSK_ER_model](https://raw.githubusercontent.com/BorisPlus/otus_webpython_006/master/README.files/images/screenshots/admin_login.png "Title")
-* Административная панель Django
-![KIOSK_ER_model](https://raw.githubusercontent.com/BorisPlus/otus_webpython_006/master/README.files/images/screenshots/admin.png "Title")
-* Список товаров
-![KIOSK_ER_model](https://raw.githubusercontent.com/BorisPlus/otus_webpython_006/master/README.files/images/screenshots/admin_product_list.png "Title")
-* Создание \ редактирование товара
-![KIOSK_ER_model](https://raw.githubusercontent.com/BorisPlus/otus_webpython_006/master/README.files/images/screenshots/admin_product.png "Title")
 * После перехода в магазин
+
 ![KIOSK_ER_model](https://raw.githubusercontent.com/BorisPlus/otus_webpython_006/master/README.files/images/screenshots/go_to_store.png "Title")
+
+Административная панель Веб-приложения:
+
+* Вход в административную панель Django
+
+![KIOSK_ER_model](https://raw.githubusercontent.com/BorisPlus/otus_webpython_006/master/README.files/images/screenshots/admin_login.png "Title")
+
+* Административная панель Django
+
+![KIOSK_ER_model](https://raw.githubusercontent.com/BorisPlus/otus_webpython_006/master/README.files/images/screenshots/admin.png "Title")
+
+* Список товаров
+
+![KIOSK_ER_model](https://raw.githubusercontent.com/BorisPlus/otus_webpython_006/master/README.files/images/screenshots/admin_product_list.png "Title")
+
+* Создание \ редактирование товара
+
+![KIOSK_ER_model](https://raw.githubusercontent.com/BorisPlus/otus_webpython_006/master/README.files/images/screenshots/admin_product.png "Title")
+
 * Виджет для изображения в форме
+
 ![KIOSK_ER_model](https://raw.githubusercontent.com/BorisPlus/otus_webpython_006/master/README.files/images/screenshots/admin_img_widget.png "Title")
 
 ### Фичеризм реализации
