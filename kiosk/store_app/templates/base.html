@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block html_head_title %}
+        {% endblock %}
+    </title>
+</head>
+<body>
+{% block navigation %}
+:: <a href="/admin">Aдминка</a> :: <a href="{% url 'product_list' %}">К общему списку</a> :: <br>
+{% endblock %}
+{% block html_body %}
+{% endblock %}
+</body>
+</html>
