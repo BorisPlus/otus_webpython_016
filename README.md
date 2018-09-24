@@ -52,6 +52,14 @@ $ cd <your_dir>
 $ git clone git://github.com/BorisPlus/otus_webpython_006.git
 ```
 
+Не забудте изменить значение _SECRET_KEY_ в файле _/<absolute_path>/kiosk/kiosk/settings.py_
+
+```python
+...
+SECRET_KEY = 'input_your_secret_key_here'
+...
+```
+
 ### Использование
 
 В качетве базы данных в данном проекте выбрана SQLite, поскольку она лучше всего подходит для быстрого разворачивания приложения с целью демонстратиции его работоспособности. 
@@ -82,7 +90,7 @@ python3 /<absolute_path>/kiosk/manage.py runserver
 
 Вы можете разработать дополнительные модули получения сведений о товарах из других источников, главное чтобы разработанный модуль получения сведений, если вы конечно хотите использовать уже реализованный мной модуль импорта, возвращал сведения о товарах, атрибутах и их значениях в формате данных, установленном мною для импорта.
 
-Если Вам интересно, то ознакомтесь с [дополнительной документацией](https://github.com/BorisPlus/otus_webpython_006/tree/master/additional_files_for_demonstration_of_app_working/import_data_to_kiosk_db_from_different_sources/README.md)
+Если Вам интересно, то ознакомтесь с [дополнительной документацией](https://github.com/BorisPlus/otus_webpython_006/tree/master/development_test_data/README.md)
 данного проекта (**_внимание!_**: у модуля получения сведений о товарах с сайта Интернет-магазина "Мвидео" (не реклама) имеются свои зависимости).
 
 ### Cкриншоты
