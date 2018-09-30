@@ -8,7 +8,7 @@ from store_app import views as store_app_views
 
 
 urlpatterns = [
-    # url(r'^admin/logout/$', auth_views.logout, {'next_page': '/admin'}),
+    url(r'^admin/logout/$', auth_views.logout, {'next_page': '/admin'}),
     url(r'^admin$', RedirectView.as_view(url='/admin/store_app/product/')),
     url(r'^admin/', admin.site.urls),
     url(r'^product_list/$', store_app_views.ProductList.as_view(), name="product_list"),
