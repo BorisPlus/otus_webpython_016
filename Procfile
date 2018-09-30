@@ -1,0 +1,1 @@
+web: gunicorn kiosk.kiosk.wsgi --log-file -
