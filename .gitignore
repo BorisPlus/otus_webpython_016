@@ -3,3 +3,9 @@ gitignore/**
 
 # PyCharm
 .idea/**
+
+# Python
+**/__pycache__/*
+
+# SQLite local db
+**/db.sqlite3
