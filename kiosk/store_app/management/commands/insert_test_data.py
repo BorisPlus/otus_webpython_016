@@ -1,6 +1,7 @@
 from django.core.management.base import BaseCommand
 
 try:
+    # For Django running
     from store_app import models
 except:
     # For PyCharm autocomplite only
@@ -58,8 +59,8 @@ class Command(BaseCommand):
                     p2a_obj.save()
 
         except:
-            #  DoesNotExist
             raise
+
         self.stdout.write(
             self.style.SUCCESS(
                 'Successfully %s products were loaded to shop \'%s\' (%s)' % (
