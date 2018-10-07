@@ -6,7 +6,7 @@ except:
     # For PyCharm autocomplite only
     from kiosk.store_app import models
 
-from .insert_dev_data_command.data_fetchers import mvideo_ru_data as dev_data
+from .insert_test_data_command.data_fetchers import mvideo_ru_data as dev_data
 
 
 class Command(BaseCommand):
@@ -15,14 +15,21 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument('shop_name', type=str)
+        parser.add_argument('shop_city_name', type=str)
         parser.add_argument('mvideo_ru_url_of_products', type=str)
 
     def handle(self, *args, **options):
         shop_name = options['shop_name']
+        shop_city_name = options['shop_city_name']
         mvideo_ru_url_of_products = options['mvideo_ru_url_of_products']
         products_info = list()
         try:
-            shop, shop_created = models.Shop.objects.get_or_create(name=shop_name)
+            city, city_created = models.City.objects.get_or_create(name=shop_city_name)
+
+            shop, shop_created = models.Shop.objects.get_or_create(
+                name=shop_name,
+                city=city
+            )
             # shop.save()
 
             products_info = dev_data.get_products_info(url=mvideo_ru_url_of_products)
@@ -55,8 +62,8 @@ class Command(BaseCommand):
             raise
         self.stdout.write(
             self.style.SUCCESS(
-                'Successfully %s products were loaded to shop \'%s\'' % (
-                    len(products_info), shop_name
+                'Successfully %s products were loaded to shop \'%s\' (%s)' % (
+                    len(products_info), shop_name, shop_city_name
                 )
             )
         )

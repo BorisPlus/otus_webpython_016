@@ -59,24 +59,27 @@ pip3 install -r additional/import_to_db_from/requirements.txt
 Вызов заполнения тестовыми данными
 
 ```bash
-python3 kiosk/manage.py insert_test_data '<НАЗВАНИЕ МАГАЗИНА>' '<URL страницы товаров МВИДЕО>'
+python3 kiosk/manage.py insert_test_data '<Название магазина>' '<Город магазина>' '<URL страницы товаров Мвидео>'
 ```
 
 Например,
 ```bash
-python3 kiosk/manage.py insert_test_data 'Мвидео' 'https://www.mvideo.ru/noutbuki-planshety-komputery/noutbuki-118/f/page=2'
+python3 kiosk/manage.py insert_test_data 'Мвидео' 'г.Москва' 'https://www.mvideo.ru/noutbuki-planshety-komputery/noutbuki-118/f/page=2'
 ```
 
 ```bash
-python3 kiosk/manage.py insert_test_data 'М-Audio' 'https://www.mvideo.ru/videotehnika/saundbary-2547/f/page=2'
-python3 kiosk/manage.py insert_test_data 'М-Audio' 'https://www.mvideo.ru/videotehnika/saundbary-2547/f/page=5'
+python3 kiosk/manage.py insert_test_data 'М-Audio' 'г.Новосибирск' 'https://www.mvideo.ru/videotehnika/saundbary-2547/f/page=2'
 ```
 
 ```bash
-python3 kiosk/manage.py insert_test_data '"Василий" Incorporated' 'https://www.mvideo.ru/smartfony-i-svyaz/smartfony-205/f/category=iphone-914/page=1'
-python3 kiosk/manage.py insert_test_data '"Василий" Incorporated' 'https://www.mvideo.ru/smartfony-i-svyaz/smartfony-205/f/category=iphone-914/page=2'
-python3 kiosk/manage.py insert_test_data '"Василий" Incorporated' 'https://www.mvideo.ru/smartfony-i-svyaz/smartfony-205/f/category=iphone-914/page=3'
+python3 kiosk/manage.py insert_test_data 'М-Audio' 'филиал в г.Москва' 'https://www.mvideo.ru/videotehnika/saundbary-2547/f/page=2'
+python3 kiosk/manage.py insert_test_data 'М-Audio' 'филиал в г.Москва' 'https://www.mvideo.ru/videotehnika/saundbary-2547/f/page=5'
+```
 
+```bash
+python3 kiosk/manage.py insert_test_data '"Василий" Incorporated' 'с.Яфонино' 'https://www.mvideo.ru/smartfony-i-svyaz/smartfony-205/f/category=iphone-914/page=1'
+python3 kiosk/manage.py insert_test_data '"Василий" Incorporated' 'с.Яфонино' 'https://www.mvideo.ru/smartfony-i-svyaz/smartfony-205/f/category=iphone-914/page=2'
+python3 kiosk/manage.py insert_test_data '"Василий" Incorporated' 'с.Яфонино' 'https://www.mvideo.ru/smartfony-i-svyaz/smartfony-205/f/category=iphone-914/page=3'
 ```
 
 В случае реализации Вами собственного модуля сбора сведений о товарах, атрибутах и их значениях просто замените ссылку на модуль получения сведений на свою (возможно добавив при импорте as get_products_info).
