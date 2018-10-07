@@ -66,7 +66,7 @@ def get_products_info(url='https://www.mvideo.ru/noutbuki-planshety-komputery/no
                     break
                 span_tags = description.findAll('span')
                 for span_tag in span_tags:
-                    product_dict['description'] = span_tag.string
+                    product_dict['description'] = span_tag.string.strip('\t\n\r ')
                     is_break = True
                     break
 
