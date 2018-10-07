@@ -8,10 +8,12 @@
             <th>Подробное описание товара</th>
         </tr>
         <tr>
-            <td><img width="300" src="{{ object.main_image_path }}"></td>
+            <td><img width="300" src="{{ object.main_image_url }}"></td>
             <td>
                 <b>Товар:</b><br>
                 {{ object.name }}<br>
+                <b>из магазина:</b><br>
+                {{ object.shop }}<br>
                 <b>Описание:</b><br>
                 {{ object.description }} <br>
                 <b>Характеристики товара:</b><br>
@@ -21,7 +23,7 @@
                     {% endfor %}
                 </ul>
                 <br>
-                <a href="{{ object.shop_url }}" target="_blank">Перейти на сайт магазина</a> <br>
+                <a href="{{ object.url_at_url }}" target="_blank">Перейти на сайт магазина</a> <br>
             </td>
         </tr>
     </table>

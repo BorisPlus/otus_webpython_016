@@ -11,14 +11,16 @@
         <tr>
             <td>
                 <a href="{% url 'product_detail' product.id %}">
-                    <img width="300" src="{{ product.main_image_path }}">
+                    <img width="300" src="{{ product.main_image_url }}">
                 </a>
             </td>
             <td>
                 см. подробнее <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a><br>
+                <b>в магазине:</b><br>
+                {{ product.shop }}<br>
                 <b>ОПИСАНИЕ:</b><br>
                 {{ product.description }} <br>
-                <a href="{{ product.shop_url }}" target="_blank">Перейти на сайт магазина</a> <br>
+                <a href="{{ product.url_at_shop }}" target="_blank">Перейти на сайт магазина</a> <br>
             </td>
         </tr>
         {% endfor %}
