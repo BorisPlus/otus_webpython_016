@@ -4,19 +4,19 @@ from bs4 import BeautifulSoup
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
-def get_products_info(link='https://www.mvideo.ru/noutbuki-planshety-komputery/noutbuki-118'):
+def get_products_info(url='https://www.mvideo.ru/noutbuki-planshety-komputery/noutbuki-118'):
     products_info = []
     try:
 
         http = urllib3.PoolManager()
-        request = http.request('GET', link)
+        request = http.request('GET', url)
         soup = BeautifulSoup(request.data)
 
         product_dict_template = {
-            'main_image_path': '',
+            'main_image_url': '',
             'name': '',
             'description': '',
-            'shop_url': '',
+            'url_at_shop': '',
             'attrs': ''
         }
         attrs = []
@@ -37,7 +37,7 @@ def get_products_info(link='https://www.mvideo.ru/noutbuki-planshety-komputery/n
                 img_tags = image.findAll('img', {'class': 'lazy product-tile-picture__image'})
                 for img_tag in img_tags:
                     if img_tag.get('data-original', None):
-                        product_dict['main_image_path'] = 'http:%s' % img_tag['data-original']
+                        product_dict['main_image_url'] = 'http:%s' % img_tag['data-original']
                         is_break = True
                         break
 
@@ -54,7 +54,7 @@ def get_products_info(link='https://www.mvideo.ru/noutbuki-planshety-komputery/n
                         a_tags = h4_tag.findAll('a', )
                         for a_tag in a_tags:
                             if a_tag.get('href', None):
-                                product_dict['shop_url'] = 'https://www.mvideo.ru%s' % a_tag.get('href')
+                                product_dict['url_at_shop'] = 'https://www.mvideo.ru%s' % a_tag.get('href')
                                 break
                         is_break = True
                         break
