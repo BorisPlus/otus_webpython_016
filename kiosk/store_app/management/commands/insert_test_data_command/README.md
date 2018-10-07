@@ -35,8 +35,8 @@
 
 ### Модули получения сведений о товарах
 
-[Пример](https://github.com/BorisPlus/otus_webpython_016/tree/master/kiosk/store_app/management/commands/insert_dev_data_command/data_fetchers/mvideo_ru_data.py) 
-интерактивного сбора сведений о товарах, атрибутах и их значениях со страниц сайта Интернет-магазина "Мвидео" (не реклама) лежит в **_kiosk/store_app/management/commands/insert_dev_data_command/data_fetchers/mvideo_ru_data.py_**.
+[Пример](https://github.com/BorisPlus/otus_webpython_016/tree/master/kiosk/store_app/management/commands/insert_test_data_command/data_fetchers/mvideo_ru_data.py) 
+интерактивного сбора сведений о товарах, атрибутах и их значениях со страниц сайта Интернет-магазина "Мвидео" (не реклама) лежит в **_kiosk/store_app/management/commands/insert_test_data_command/data_fetchers/mvideo_ru_data.py_**.
 
 Данный пример осуществляет разбор html-структуры страниц сайта Интернет-магазина "Мвидео" и выбирает значения, соответствущие полям товаров и атрибутов, приводя собираемые даные к вышеописанному формату данных для импорта.
 
@@ -59,23 +59,23 @@ pip3 install -r additional/import_to_db_from/requirements.txt
 Вызов заполнения тестовыми данными
 
 ```bash
-python3 kiosk/manage.py insert_dev_data '<НАЗВАНИЕ МАГАЗИНА>' '<URL страницы товаров МВИДЕО>'
+python3 kiosk/manage.py insert_test_data '<НАЗВАНИЕ МАГАЗИНА>' '<URL страницы товаров МВИДЕО>'
 ```
 
 Например,
 ```bash
-python3 kiosk/manage.py insert_dev_data 'Мвидео' 'https://www.mvideo.ru/noutbuki-planshety-komputery/noutbuki-118/f/page=2'
+python3 kiosk/manage.py insert_test_data 'Мвидео' 'https://www.mvideo.ru/noutbuki-planshety-komputery/noutbuki-118/f/page=2'
 ```
 
 ```bash
-python3 kiosk/manage.py insert_dev_data 'М-Audio' 'https://www.mvideo.ru/videotehnika/saundbary-2547/f/page=2'
-python3 kiosk/manage.py insert_dev_data 'М-Audio' 'https://www.mvideo.ru/videotehnika/saundbary-2547/f/page=5'
+python3 kiosk/manage.py insert_test_data 'М-Audio' 'https://www.mvideo.ru/videotehnika/saundbary-2547/f/page=2'
+python3 kiosk/manage.py insert_test_data 'М-Audio' 'https://www.mvideo.ru/videotehnika/saundbary-2547/f/page=5'
 ```
 
 ```bash
-python3 kiosk/manage.py insert_dev_data '"Василий" Incorporated' 'https://www.mvideo.ru/smartfony-i-svyaz/smartfony-205/f/category=iphone-914/page=1'
-python3 kiosk/manage.py insert_dev_data '"Василий" Incorporated' 'https://www.mvideo.ru/smartfony-i-svyaz/smartfony-205/f/category=iphone-914/page=2'
-python3 kiosk/manage.py insert_dev_data '"Василий" Incorporated' 'https://www.mvideo.ru/smartfony-i-svyaz/smartfony-205/f/category=iphone-914/page=3'
+python3 kiosk/manage.py insert_test_data '"Василий" Incorporated' 'https://www.mvideo.ru/smartfony-i-svyaz/smartfony-205/f/category=iphone-914/page=1'
+python3 kiosk/manage.py insert_test_data '"Василий" Incorporated' 'https://www.mvideo.ru/smartfony-i-svyaz/smartfony-205/f/category=iphone-914/page=2'
+python3 kiosk/manage.py insert_test_data '"Василий" Incorporated' 'https://www.mvideo.ru/smartfony-i-svyaz/smartfony-205/f/category=iphone-914/page=3'
 
 ```
 
