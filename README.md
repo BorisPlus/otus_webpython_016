@@ -65,7 +65,7 @@ def get_queryset(self, request):
 
 И в итоге запрос свзанных внешних ключей таков
 
-```sqlite-sql
+```postgres-sql
 SELECT 
     "store_app_product"."id", 
     "store_app_product"."shop_id", 
