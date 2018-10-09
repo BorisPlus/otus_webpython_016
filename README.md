@@ -182,7 +182,7 @@ ORM в этом случае "помнит", что объекты коллек�
         return qs
 ```
 
-[shop_prod_count.png](https://raw.githubusercontent.com/BorisPlus/otus_webpython_016/master/README.files/images/screenshots/shop_prod_count.png "Title")
+[Скачать](https://raw.githubusercontent.com/BorisPlus/otus_webpython_016/master/README.files/images/screenshots/shop_prod_count.png "Title")
 
 Очень бы хотелось правильно и доступно донести суть проделанного. Это выражение сложно воспринимается, но это абсолютно то, что вы сделали бы "ручками", если б писали чистый SQL запрос. Итак.
 
