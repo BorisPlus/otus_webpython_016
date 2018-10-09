@@ -383,31 +383,46 @@ class ProductAdmin(ImageAdmin):
 
 ## Загрузка БД тестовыми свдениями
 
-Загрузка БД тестовыми свдениями осуществляется с использованием management-комманд, например:
+Загрузка БД тестовыми свдениями осуществляется с использованием management-комманды:
 
-python3 kiosk/manage.py insert_test_data 'Наименование магазина в нашей БД' 'город' 'ссылка на тиовары Мвидео'
+`python3 kiosk/manage.py insert_test_data 'Наименование магазина в нашей БД' 'город' 'ссылка на товары Мвидео'`
 
-`
+, например:
+
+```
 python3 kiosk/manage.py insert_test_data 'Мвидео' 'г.Москва' 'https://www.mvideo.ru/noutbuki-planshety-komputery/noutbuki-118/f/page=2'
+
 python3 kiosk/manage.py insert_test_data 'М-Audio' 'г.Новосибирск' 'https://www.mvideo.ru/videotehnika/saundbary-2547/f/page=2'
+
 python3 kiosk/manage.py insert_test_data 'М-Audio' 'филиал в г.Москва' 'https://www.mvideo.ru/videotehnika/saundbary-2547/f/page=2'
+
 python3 kiosk/manage.py insert_test_data 'М-Audio' 'филиал в г.Москва' 'https://www.mvideo.ru/videotehnika/saundbary-2547/f/page=5'
+
 python3 kiosk/manage.py insert_test_data '"Василий" Incorporated' 'с.Яфонино' 'https://www.mvideo.ru/smartfony-i-svyaz/smartfony-205/f/category=iphone-914/page=1'
+
 python3 kiosk/manage.py insert_test_data '"Василий" Incorporated' 'с.Яфонино' 'https://www.mvideo.ru/smartfony-i-svyaz/smartfony-205/f/category=iphone-914/page=2'
+
 python3 kiosk/manage.py insert_test_data '"Василий" Incorporated' 'с.Яфонино' 'https://www.mvideo.ru/smartfony-i-svyaz/smartfony-205/f/category=iphone-914/page=3'
 
 python3 kiosk/manage.py insert_test_data '"Истина где-то рядом"' 'г.Нью-Йорк' 'https://www.mvideo.ru/hobbi/binokli-i-teleskopy-2268'
 
+
 python3 kiosk/manage.py insert_test_data '"Сам себе режиссер"' 'г.С-Пб' 'https://www.mvideo.ru/videokamery-i-ekshn-kamery/ekshn-kamery-2288/f/page=1'
+
 python3 kiosk/manage.py insert_test_data '"Сам себе режиссер"' 'г.С-Пб' 'https://www.mvideo.ru/videokamery-i-ekshn-kamery/ekshn-kamery-2288/f/page=2'
+
 python3 kiosk/manage.py insert_test_data '"Сам себе режиссер"' 'г.С-Пб' 'https://www.mvideo.ru/videokamery-i-ekshn-kamery/ekshn-kamery-2288/f/page=3'
+
 python3 kiosk/manage.py insert_test_data '"Сам себе режиссер"' 'г.С-Пб' 'https://www.mvideo.ru/videokamery-i-ekshn-kamery/ekshn-kamery-2288/f/page=4'
+
 python3 kiosk/manage.py insert_test_data '"Сам себе режиссер"' 'г.С-Пб' 'https://www.mvideo.ru/videokamery-i-ekshn-kamery/ekshn-kamery-2288/f/page=5'
+
 python3 kiosk/manage.py insert_test_data '"Сам себе режиссер"' 'г.С-Пб' 'https://www.mvideo.ru/videokamery-i-ekshn-kamery/ekshn-kamery-2288/f/page=6'
+
 python3 kiosk/manage.py insert_test_data '"Сам себе режиссер"' 'г.С-Пб' 'https://www.mvideo.ru/videokamery-i-ekshn-kamery/ekshn-kamery-2288/f/page=7'
 
 python3 kiosk/manage.py insert_test_data 'Пусто' 'г.Вообще' 'https://www.mvideo.ru/empty'
-`
+```
 
 ## Авторы
 
