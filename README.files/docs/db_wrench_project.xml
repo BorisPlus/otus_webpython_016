@@ -44,87 +44,14 @@
       <UniqueConstraints/>
       <SchTrHis/>
     </Tbl>
-    <Tbl UsSo="1" nm="PRODUCTS">
+    <Tbl UsSo="1" nm="City">
       <TblOpts/>
-      <Pk ClNs="Id" nm="pkPRODUCTS"/>
+      <Pk ClNs="Id" nm="pkCity"/>
       <Cl au="0" df="" nm="Id" nu="0">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
-      <Cl au="0" df="" nm="name" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="100" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="description" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="200" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="shop_url" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="200" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="main_image_path" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="200" sc="null" sg="1" un="0"/>
-      </Cl>
-      <UniqueConstraints/>
-      <SchTrHis/>
-    </Tbl>
-    <CustomTypes/>
-  </Sch>
-  <Sch Cm="" nm="db_002">
-    <Tbl UsSo="1" nm="ATTR_2_PRODS">
-      <TblOpts/>
-      <Pk ClNs="Id" nm="pkATTR_2_PRODS"/>
-      <Cl au="0" df="" nm="Id" nu="0">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="product_id" nu="0">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="attribute_id" nu="0">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="attribute_value" nu="1">
-        <DT arr="0" ds="BLOB" en="" id="2004" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Fk deAc="3" nm="fk_ATTR_2_PRODS_ATTRIBUTES" prLkCl="Id" upAc="3">
-        <PrTb mn="0" nm="ATTRIBUTES" oe="1" sch="db_001" zr="0"/>
-        <CdTb mn="1" nm="ATTR_2_PRODS" oe="0" sch="db_002" zr="1"/>
-        <ClPr cdCl="attribute_id" prCl="Id"/>
-      </Fk>
-      <Fk deAc="3" nm="fk_ATTR_2_PRODS_PRODUCTS" prLkCl="Id" upAc="3">
-        <PrTb mn="0" nm="PRODUCTS" oe="1" sch="db_001" zr="0"/>
-        <CdTb mn="1" nm="ATTR_2_PRODS" oe="0" sch="db_002" zr="1"/>
-        <ClPr cdCl="product_id" prCl="Id"/>
-      </Fk>
-      <UniqueConstraints/>
-      <SchTrHis>
-        <StPr stA="db_001" stB="ATTR_2_PRODS_dup"/>
-      </SchTrHis>
-    </Tbl>
-    <Tbl UsSo="1" nm="ATTRIBUTES">
-      <TblOpts/>
-      <Pk ClNs="Id" nm="pkATTRIBUTES"/>
-      <Cl au="0" df="" nm="Id" nu="0">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="name" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="100" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Fk deAc="3" nm="fk_ATTRIBUTES_ATTR_2_PRODS" prLkCl="attribute_id" upAc="3">
-        <PrTb mn="0" nm="ATTR_2_PRODS" oe="1" sch="db_002" zr="0"/>
-        <CdTb mn="1" nm="ATTRIBUTES" oe="0" sch="db_002" zr="1"/>
-        <ClPr cdCl="Id" prCl="attribute_id"/>
-      </Fk>
-      <UniqueConstraints/>
-      <SchTrHis>
-        <StPr stA="db_001" stB="ATTRIBUTES_dup"/>
-      </SchTrHis>
-    </Tbl>
-    <Tbl UsSo="1" nm="CATEGORY">
-      <TblOpts/>
-      <Pk ClNs="Id" nm="pkCATEGORY"/>
-      <Cl au="0" df="" nm="Id" nu="0">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="name" nu="0">
-        <DT arr="0" ds="VarChar2" en="" id="781" ln="100" sc="null" sg="1" un="0"/>
+      <Cl au="0" df="" nm="CityName" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis/>
@@ -135,175 +62,54 @@
       <Cl au="0" df="" nm="Id" nu="0">
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
-      <Cl au="0" df="" nm="name" nu="1">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="100" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="category_id" nu="0">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Fk deAc="3" nm="fk_PRODUCTS_ATTR_2_PRODS" prLkCl="product_id" upAc="3">
-        <PrTb mn="0" nm="ATTR_2_PRODS" oe="1" sch="db_002" zr="0"/>
-        <CdTb mn="1" nm="PRODUCTS" oe="0" sch="db_002" zr="1"/>
-        <ClPr cdCl="Id" prCl="product_id"/>
-      </Fk>
-      <Fk deAc="3" nm="fk_PRODUCTS_CATEGORY_HIERARHY" prLkCl="Id" upAc="3">
-        <PrTb mn="0" nm="CATEGORY" oe="1" sch="db_002" zr="0"/>
-        <CdTb mn="1" nm="PRODUCTS" oe="0" sch="db_002" zr="1"/>
-        <ClPr cdCl="category_id" prCl="Id"/>
-      </Fk>
-      <UniqueConstraints/>
-      <SchTrHis>
-        <StPr stA="db_001" stB="PRODUCTS_dup"/>
-      </SchTrHis>
-    </Tbl>
-    <CustomTypes/>
-  </Sch>
-  <Sch Cm="" nm="db_003">
-    <Tbl UsSo="1" nm="ATTR_2_PRODS">
-      <TblOpts/>
-      <Pk ClNs="Id" nm="pkATTR_2_PRODS"/>
-      <Cl au="0" df="" nm="Id" nu="0">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="product_id" nu="0">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="attribute_id" nu="0">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="attribute_value" nu="1">
-        <DT arr="0" ds="BLOB" en="" id="2004" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <UniqueConstraints/>
-      <SchTrHis>
-        <StPr stA="db_002" stB="ATTR_2_PRODS_dup"/>
-      </SchTrHis>
-    </Tbl>
-    <Tbl UsSo="1" nm="ATTRIBUTES">
-      <TblOpts/>
-      <Pk ClNs="Id" nm="pkATTRIBUTES"/>
-      <Cl au="0" df="" nm="Id" nu="0">
+      <Cl au="0" df="" nm="shop_id" nu="0">
         <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="name" nu="0">
         <DT arr="0" ds="VarChar" en="" id="12" ln="100" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="1" nm="is_user_visible" nu="0">
-        <DT arr="0" ds="Binary" en="" id="-2" ln="1" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="1" nm="is_admin_accessivle" nu="0">
-        <DT arr="0" ds="Binary" en="" id="-2" ln="1" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Fk deAc="3" nm="fk_ATTRIBUTES_ATTR_2_PRODS" prLkCl="attribute_id" upAc="3">
-        <PrTb mn="0" nm="ATTR_2_PRODS" oe="1" sch="db_002" zr="0"/>
-        <CdTb mn="1" nm="ATTRIBUTES" oe="0" sch="db_003" zr="1"/>
-        <ClPr cdCl="Id" prCl="attribute_id"/>
-      </Fk>
-      <Fk deAc="3" nm="fk_ATTRS__ATTR_2_PRODS" prLkCl="attribute_id" upAc="3">
-        <PrTb mn="0" nm="ATTR_2_PRODS" oe="1" sch="db_003" zr="0"/>
-        <CdTb mn="1" nm="ATTRIBUTES" oe="0" sch="db_003" zr="1"/>
-        <ClPr cdCl="Id" prCl="attribute_id"/>
-      </Fk>
-      <UniqueConstraints/>
-      <SchTrHis>
-        <StPr stA="db_002" stB="ATTRIBUTES_dup"/>
-      </SchTrHis>
-    </Tbl>
-    <Tbl UsSo="1" nm="CATEGORY_HIERARHY">
-      <TblOpts/>
-      <Pk ClNs="Id" nm="pkCATEGORY_HIERARHY"/>
-      <Cl au="0" df="" nm="Id" nu="0">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="parent_id" nu="1">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="name" nu="0">
-        <DT arr="0" ds="VarChar2" en="" id="781" ln="100" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="description" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="200" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="url_at_shop" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="200" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="main_image_url" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="200" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Fk deAc="3" nm="fk_shop" prLkCl="Id" upAc="3">
+        <PrTb mn="0" nm="Shop" oe="1" sch="db_001" zr="0"/>
+        <CdTb mn="1" nm="PRODUCTS" oe="0" sch="db_001" zr="1"/>
+        <ClPr cdCl="shop_id" prCl="Id"/>
+      </Fk>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="Shop">
+      <TblOpts/>
+      <Pk ClNs="Id" nm="pkShop"/>
+      <Cl au="0" df="" nm="Id" nu="0">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="city_id" nu="0">
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="name" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="description" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="200" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="site" nu="1">
         <DT arr="0" ds="Text" en="" id="703" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
-      <Cl au="0" df="1" nm="is_user_visible" nu="0">
-        <DT arr="0" ds="Binary" en="" id="-2" ln="1" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="1" nm="is_admin_accessible" nu="0">
-        <DT arr="0" ds="Binary" en="" id="-2" ln="1" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Fk deAc="3" nm="fk_CATEGORY_HIERARHY" prLkCl="Id" upAc="3">
-        <PrTb mn="0" nm="CATEGORY_HIERARHY" oe="1" sch="db_003" zr="1"/>
-        <CdTb mn="1" nm="CATEGORY_HIERARHY" oe="0" sch="db_003" zr="1"/>
-        <ClPr cdCl="parent_id" prCl="Id"/>
-      </Fk>
-      <UniqueConstraints/>
-      <SchTrHis>
-        <StPr stA="db_002" stB="CATEGORY_HIERARHY_dup"/>
-      </SchTrHis>
-    </Tbl>
-    <Tbl UsSo="1" nm="PRODUCT_IMAGES">
-      <TblOpts/>
-      <Pk ClNs="Id" nm="pkPRODUCT_IMAGES"/>
-      <Cl au="0" df="" nm="Id" nu="0">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="product_id" nu="0">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="image_file_path" nu="0">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="1" nm="is_user_visible" nu="0">
-        <DT arr="0" ds="Binary" en="" id="-2" ln="1" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Fk deAc="3" nm="fk_PRODUCTS" prLkCl="Id" upAc="3">
-        <PrTb mn="0" nm="PRODUCTS" oe="1" sch="db_003" zr="0"/>
-        <CdTb mn="1" nm="PRODUCT_IMAGES" oe="0" sch="db_003" zr="1"/>
-        <ClPr cdCl="product_id" prCl="Id"/>
+      <Fk deAc="3" nm="fk_city" prLkCl="Id" upAc="3">
+        <PrTb mn="0" nm="City" oe="1" sch="db_001" zr="0"/>
+        <CdTb mn="1" nm="Shop" oe="0" sch="db_001" zr="1"/>
+        <ClPr cdCl="city_id" prCl="Id"/>
       </Fk>
       <UniqueConstraints/>
       <SchTrHis/>
-    </Tbl>
-    <Tbl UsSo="1" nm="PRODUCTS">
-      <TblOpts/>
-      <Pk ClNs="Id" nm="pkPRODUCTS"/>
-      <Cl au="0" df="" nm="Id" nu="0">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="category_id" nu="0">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="name" nu="1">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="100" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="small_description" nu="0">
-        <DT arr="0" ds="VarChar2" en="" id="781" ln="100" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="description" nu="0">
-        <DT arr="0" ds="Text" en="" id="703" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="" nm="main_image" nu="1">
-        <DT arr="0" ds="VarChar2" en="" id="781" ln="null" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="1" nm="is_user_visible" nu="0">
-        <DT arr="0" ds="Binary" en="" id="-2" ln="1" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Cl au="0" df="0" nm="is_archived" nu="0">
-        <DT arr="0" ds="Binary" en="" id="-2" ln="1" sc="null" sg="1" un="0"/>
-      </Cl>
-      <Fk deAc="3" nm="fk_CATEGORY" prLkCl="Id" upAc="3">
-        <PrTb mn="0" nm="CATEGORY_HIERARHY" oe="1" sch="db_003" zr="0"/>
-        <CdTb mn="1" nm="PRODUCTS" oe="0" sch="db_003" zr="1"/>
-        <ClPr cdCl="category_id" prCl="Id"/>
-      </Fk>
-      <Fk deAc="3" nm="fk_PRODS__ATTRS_2_PRODS" prLkCl="product_id" upAc="3">
-        <PrTb mn="0" nm="ATTR_2_PRODS" oe="1" sch="db_003" zr="0"/>
-        <CdTb mn="1" nm="PRODUCTS" oe="0" sch="db_003" zr="1"/>
-        <ClPr cdCl="Id" prCl="product_id"/>
-      </Fk>
-      <UniqueConstraints/>
-      <SchTrHis>
-        <StPr stA="db_002" stB="PRODUCTS_dup"/>
-      </SchTrHis>
     </Tbl>
     <CustomTypes/>
   </Sch>
@@ -329,19 +135,29 @@
       <DbTableRectangleFill>HeaderFooterFill</DbTableRectangleFill>
       <svg path="/home/developer/PycharmProjects/otus_webpython_004/additional/docs/simple ER-model.svg"/>
     </DiaProps>
-    <TbGl bkCl="ff6666ff" sch="db_001" tbl="ATTRS_2_PRODS" x="168" y="261"/>
-    <TbGl bkCl="ff6666ff" sch="db_001" tbl="ATTRIBUTES" x="319" y="139"/>
-    <TbGl bkCl="ff6666ff" sch="db_001" tbl="PRODUCTS" x="47" y="137"/>
-    <FkGl bkCl="ff000000" childEdge="EAST" nm="db_001.ATTRS_2_PRODS.fk_ATTRS" parentEdge="SOUTH" positioner="TwoLineUserLinkPositioner">
+    <TbGl bkCl="ff6666ff" sch="db_001" tbl="ATTRS_2_PRODS" x="551" y="358"/>
+    <TbGl bkCl="ff6666ff" sch="db_001" tbl="PRODUCTS" x="195" y="351"/>
+    <TbGl bkCl="ff6666ff" sch="db_001" tbl="City" x="201" y="91"/>
+    <TbGl bkCl="ff6666ff" sch="db_001" tbl="Shop" x="198" y="197"/>
+    <TbGl bkCl="ff6666ff" sch="db_001" tbl="ATTRIBUTES" x="582" y="211"/>
+    <FkGl bkCl="ff000000" childEdge="NORTH" nm="db_001.ATTRS_2_PRODS.fk_ATTRS" parentEdge="SOUTH" positioner="OneLineUserLinkPositioner">
       <positionableLines>
-        <positionableLine lineRole="PARENT_LINE" x1="483" x2="483" y1="192" y2="312"/>
-        <positionableLine lineRole="CHILD_LINE" x1="408" x2="479" y1="316" y2="316"/>
+        <positionableLine lineRole="SINGLE_LINE" x1="676" x2="676" y1="264" y2="358"/>
       </positionableLines>
     </FkGl>
-    <FkGl bkCl="ff000000" childEdge="WEST" nm="db_001.ATTRS_2_PRODS.fk_PRODS" parentEdge="SOUTH" positioner="TwoLineUserLinkPositioner">
+    <FkGl bkCl="ff000000" childEdge="WEST" nm="db_001.ATTRS_2_PRODS.fk_PRODS" parentEdge="EAST" positioner="OneLineUserLinkPositioner">
       <positionableLines>
-        <positionableLine lineRole="PARENT_LINE" x1="99" x2="99" y1="229" y2="300"/>
-        <positionableLine lineRole="CHILD_LINE" x1="168" x2="103" y1="304" y2="304"/>
+        <positionableLine lineRole="SINGLE_LINE" x1="441" x2="551" y1="399" y2="399"/>
+      </positionableLines>
+    </FkGl>
+    <FkGl bkCl="ff000000" childEdge="NORTH" nm="db_001.PRODUCTS.fk_shop" parentEdge="SOUTH" positioner="OneLineUserLinkPositioner">
+      <positionableLines>
+        <positionableLine lineRole="SINGLE_LINE" x1="307" x2="307" y1="289" y2="351"/>
+      </positionableLines>
+    </FkGl>
+    <FkGl bkCl="ff000000" childEdge="NORTH" nm="db_001.Shop.fk_city" parentEdge="SOUTH" positioner="OneLineUserLinkPositioner">
+      <positionableLines>
+        <positionableLine lineRole="SINGLE_LINE" x1="306" x2="306" y1="144" y2="197"/>
       </positionableLines>
     </FkGl>
     <Notes/>
@@ -369,27 +185,6 @@
       <DbTableRectangleFill>HeaderFooterFill</DbTableRectangleFill>
       <svg path=""/>
     </DiaProps>
-    <TbGl bkCl="ff6666ff" sch="db_002" tbl="ATTR_2_PRODS" x="545" y="405"/>
-    <TbGl bkCl="ff6666ff" sch="db_002" tbl="ATTRIBUTES" x="759" y="86"/>
-    <TbGl bkCl="ff6666ff" sch="db_002" tbl="PRODUCTS" x="188" y="95"/>
-    <TbGl bkCl="ff6666ff" sch="db_002" tbl="CATEGORY" x="185" y="412"/>
-    <FkGl bkCl="ff000000" childEdge="WEST" nm="db_002.ATTRIBUTES.fk_ATTRIBUTES_ATTR_2_PRODS" parentEdge="NORTH" positioner="TwoLineUserLinkPositioner">
-      <positionableLines>
-        <positionableLine lineRole="PARENT_LINE" x1="675" x2="675" y1="405" y2="138"/>
-        <positionableLine lineRole="CHILD_LINE" x1="759" x2="679" y1="134" y2="134"/>
-      </positionableLines>
-    </FkGl>
-    <FkGl bkCl="ff000000" childEdge="EAST" nm="db_002.PRODUCTS.fk_PRODUCTS_ATTR_2_PRODS" parentEdge="NORTH" positioner="TwoLineUserLinkPositioner">
-      <positionableLines>
-        <positionableLine lineRole="PARENT_LINE" x1="610" x2="610" y1="405" y2="160"/>
-        <positionableLine lineRole="CHILD_LINE" x1="409" x2="606" y1="156" y2="156"/>
-      </positionableLines>
-    </FkGl>
-    <FkGl bkCl="ff000000" childEdge="SOUTH" nm="db_002.PRODUCTS.fk_PRODUCTS_CATEGORY_HIERARHY" parentEdge="NORTH" positioner="OneLineUserLinkPositioner">
-      <positionableLines>
-        <positionableLine lineRole="SINGLE_LINE" x1="201" x2="201" y1="412" y2="161"/>
-      </positionableLines>
-    </FkGl>
     <Notes/>
     <Zones/>
   </Dgm>
@@ -415,35 +210,6 @@
       <DbTableRectangleFill>HeaderFooterFill</DbTableRectangleFill>
       <svg path=""/>
     </DiaProps>
-    <TbGl bkCl="ff6666ff" sch="db_003" tbl="ATTR_2_PRODS" x="619" y="378"/>
-    <TbGl bkCl="ff6666ff" sch="db_003" tbl="ATTRIBUTES" x="592" y="223"/>
-    <TbGl bkCl="ff6666ff" sch="db_003" tbl="CATEGORY_HIERARHY" x="262" y="456"/>
-    <TbGl bkCl="ff6666ff" sch="db_003" tbl="PRODUCTS" x="218" y="94"/>
-    <TbGl bkCl="ff6666ff" sch="db_003" tbl="PRODUCT_IMAGES" x="606" y="115"/>
-    <FkGl bkCl="ff000000" childEdge="SOUTH" nm="db_003.ATTRIBUTES.fk_ATTRS__ATTR_2_PRODS" parentEdge="NORTH" positioner="OneLineUserLinkPositioner">
-      <positionableLines>
-        <positionableLine lineRole="SINGLE_LINE" x1="655" x2="655" y1="378" y2="302"/>
-      </positionableLines>
-    </FkGl>
-    <FkGl bkCl="ff000000" childEdge="" nm="db_003.CATEGORY_HIERARHY.fk_CATEGORY_HIERARHY" parentEdge="" positioner="">
-      <positionableLines/>
-    </FkGl>
-    <FkGl bkCl="ff000000" childEdge="WEST" nm="db_003.PRODUCT_IMAGES.fk_PRODUCTS" parentEdge="EAST" positioner="OneLineUserLinkPositioner">
-      <positionableLines>
-        <positionableLine lineRole="SINGLE_LINE" x1="481" x2="606" y1="135" y2="135"/>
-      </positionableLines>
-    </FkGl>
-    <FkGl bkCl="ff000000" childEdge="SOUTH" nm="db_003.PRODUCTS.fk_CATEGORY" parentEdge="NORTH" positioner="OneLineUserLinkPositioner">
-      <positionableLines>
-        <positionableLine lineRole="SINGLE_LINE" x1="318" x2="318" y1="456" y2="225"/>
-      </positionableLines>
-    </FkGl>
-    <FkGl bkCl="ff000000" childEdge="SOUTH" nm="db_003.PRODUCTS.fk_PRODS__ATTRS_2_PRODS" parentEdge="WEST" positioner="TwoLineUserLinkPositioner">
-      <positionableLines>
-        <positionableLine lineRole="PARENT_LINE" x1="619" x2="478" y1="417" y2="417"/>
-        <positionableLine lineRole="CHILD_LINE" x1="474" x2="474" y1="225" y2="413"/>
-      </positionableLines>
-    </FkGl>
     <Notes/>
     <Zones/>
   </Dgm>
@@ -472,7 +238,6 @@
     <TbGl bkCl="ff6666ff" sch="db_001" tbl="PRODUCTS" x="113" y="226"/>
     <TbGl bkCl="ff6666ff" sch="db_001" tbl="ATTRIBUTES" x="262" y="365"/>
     <TbGl bkCl="ff6666ff" sch="db_001" tbl="ATTRS_2_PRODS" x="547" y="218"/>
-    <TbGl bkCl="ff6666ff" sch="db_002" tbl="ATTRIBUTES" x="282" y="385"/>
     <FkGl bkCl="ff000000" childEdge="WEST" nm="db_001.ATTRS_2_PRODS.fk_ATTRS" parentEdge="NORTH" positioner="TwoLineUserLinkPositioner">
       <positionableLines>
         <positionableLine lineRole="PARENT_LINE" x1="389" x2="389" y1="365" y2="279"/>
@@ -481,13 +246,13 @@
     </FkGl>
     <FkGl bkCl="ff000000" childEdge="WEST" nm="db_001.ATTRS_2_PRODS.fk_PRODS" parentEdge="EAST" positioner="OneLineUserLinkPositioner">
       <positionableLines>
-        <positionableLine lineRole="SINGLE_LINE" x1="369" x2="547" y1="254" y2="254"/>
+        <positionableLine lineRole="SINGLE_LINE" x1="359" x2="547" y1="254" y2="254"/>
       </positionableLines>
     </FkGl>
     <Notes/>
     <Zones/>
   </Dgm>
-  <RnmMgr NxRnmId="20">
+  <RnmMgr NxRnmId="23">
     <RnmCh ObjCls="Schema" ParCls="Database" ParNme="newDb" SupCls="" SupNme="">
       <Rnm id="1" nNm="db_001" oNm="schemaA"/>
     </RnmCh>
@@ -541,6 +306,15 @@
       <Rnm id="19" nNm="ATTRS_2_PRODS" oNm="PRODS_2_ATTRS"/>
       <Rnm id="18" nNm="PRODS_2_ATTRS" oNm="ATTR_2_PRODS"/>
     </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="Shop" SupCls="Schema" SupNme="db_001">
+      <Rnm id="20" nNm="name" oNm="ShopName"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="PRODUCTS" SupCls="Schema" SupNme="db_001">
+      <Rnm id="21" nNm="url_at_shop" oNm="shop_url"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="PRODUCTS" SupCls="Schema" SupNme="db_001">
+      <Rnm id="22" nNm="main_image_url" oNm="main_image_path"/>
+    </RnmCh>
   </RnmMgr>
   <DbDocOptionMgr>
     <BasicOptionMgr>
@@ -558,29 +332,11 @@
     </BasicOptionMgr>
   </DbDocOptionMgr>
   <OpenEditors>
-    <OpenEditor ClsNm="Diagram" fqn="null.003" selected="0"/>
     <OpenEditor ClsNm="Diagram" fqn="null.001" selected="1"/>
-    <OpenEditor ClsNm="Diagram" fqn="null.002" selected="0"/>
   </OpenEditors>
   <TreePaths>
     <TreePath/>
-    <TreePath>/Schemas (3)</TreePath>
-    <TreePath>/Schemas (3)/db_001</TreePath>
-    <TreePath>/Schemas (3)/db_001/Tables (3)</TreePath>
-    <TreePath>/Schemas (3)/db_001/Tables (3)/ATTRIBUTES</TreePath>
-    <TreePath>/Schemas (3)/db_001/Tables (3)/ATTRIBUTES/Columns (2)</TreePath>
-    <TreePath>/Schemas (3)/db_001/Tables (3)/ATTRS_2_PRODS</TreePath>
-    <TreePath>/Schemas (3)/db_001/Tables (3)/ATTRS_2_PRODS/Columns (4)</TreePath>
-    <TreePath>/Schemas (3)/db_001/Tables (3)/PRODUCTS</TreePath>
-    <TreePath>/Schemas (3)/db_001/Tables (3)/PRODUCTS/Columns (5)</TreePath>
-    <TreePath>/Schemas (3)/db_002</TreePath>
-    <TreePath>/Schemas (3)/db_002/Tables (4)</TreePath>
-    <TreePath>/Schemas (3)/db_002/Tables (4)/CATEGORY</TreePath>
-    <TreePath>/Schemas (3)/db_003</TreePath>
-    <TreePath>/Schemas (3)/db_003/Tables (5)</TreePath>
-    <TreePath>/Schemas (3)/db_003/Tables (5)/ATTR_2_PRODS</TreePath>
-    <TreePath>/Schemas (3)/db_003/Tables (5)/CATEGORY_HIERARHY</TreePath>
-    <TreePath>/Schemas (3)/db_003/Views (0)</TreePath>
+    <TreePath>/Schemas (1)</TreePath>
   </TreePaths>
   <SqlTexts/>
 </Db>

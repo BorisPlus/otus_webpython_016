@@ -32,6 +32,12 @@ class Shop(models.Model):
     site = models.URLField(blank=True, null=True, verbose_name='Сайт', )
 
     def __str__(self):
+        return self.get_full_name()
+
+    def get_name(self):
+        return '{x}'.format(x=self.name)
+
+    def get_full_name(self):
         return '{x} ({y})'.format(x=self.name, y=self.city.name)
 
 
