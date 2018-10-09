@@ -229,14 +229,14 @@ class ShopFilter(SimpleListFilter):
     parameter_name = 'shop__id__exact'
 
     def lookups(self, request, model_admin):
-        return [(s.id, str(s)) for s in models.Shop.objects.all().select_related('city')]
+        return [(s.id, str(s)) for s in models.Shop.objects.all()]
 
     def queryset(self, request, queryset):
         if self.value():
             return queryset.filter(shop__id__exact=self.value())
 
 ```
-Так, число запросов осталось неизменным.
+Так, число запросов осталось неизменным... равным **14**, где **7** из **8** запросов лишние.
 
 Но мы забили. У магазина есть внешний ключ на город, который мы используем в отображении полного наименования магазина в формате "Магазин (г.Город)". Вам не напомнило это задачу выборки внешнего ключа, связанного по внешнему ключу с объеком. Да! тут нужен уже известный метод _select_related_.
 
