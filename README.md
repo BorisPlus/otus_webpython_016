@@ -18,6 +18,7 @@
 
 С точки зрения БД схема такова:
 ![KIOSK_ER_model](https://raw.githubusercontent.com/BorisPlus/otus_webpython_016/master/README.files/images/simple_ER_model.png "Title")
+
 [скачать проект схемы БД в формате DbWrench](https://raw.githubusercontent.com/BorisPlus/otus_webpython_016/master/README.files/docs/db_wrench_project.xml "Title")
 
 Спискок сущностей немного надуманный, он подобран для демонстрации возможности оптимизации запросов ORM Django к базе данных.
